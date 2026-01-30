@@ -1,31 +1,49 @@
-# CP-Project-Audit-logs-
+# CP-Project-Audit-logs (Activity Log Viewer - M16)
 
-<h2> Phase 1 Progress — Activity Log Viewer (M16)</h2>
+This project is an administrative security module designed to visualize system usage. It serves as a frontend interface for an Audit Log system, allowing administrators to inspect data changes (Insert, Update, Delete) across the application.
 
-<h3>✅ Completed</h3>
+## 🚀 Phase 1 Progress
 
-<h4>Database Setup</h4>
-<ul>
-  <li>Created project database <strong>audit_db</strong></li>
-  <li>Designed and created the <strong>audit_log</strong> table to store user activity details (actor, module, action, IP, timestamps, old/new data)</li>
-</ul>
+### ✅ Completed Tasks
 
-<h4>Dummy Data Simulation</h4>
-<ul>
-  <li>Inserted sample log entries to simulate real system actions (insert, update, delete, login, etc.)</li>
-  <li>Used JSON fields to store <strong>before</strong> and <strong>after</strong> snapshots for update operations</li>
-</ul>
+#### 1. Database Setup
+- Created project database **`audit_db`**.
+- Designed and created the **`audit_log`** table to store user activity details:
+  - Actor (User)
+  - Module
+  - Action (Insert/Update/Delete)
+  - IP Address
+  - Timestamps
+  - Old/New Data (JSON format)
 
-<h4>Admin Log Viewer (logs.php)</h4>
-<ul>
-  <li>Built the initial <strong>Activity Log Viewer UI</strong> for admins</li>
-  <li>Connected to database and fetched logs ordered by latest activity</li>
-  <li>Displayed data in a structured tabular format</li>
-</ul>
+#### 2. Dummy Data Simulation
+- Inserted sample log entries to simulate real system actions (e.g., login, updates, deletions).
+- Utilized JSON fields to store **before** and **after** snapshots for update operations to track specific data changes.
 
-<h4>Basic Search &amp; Filters</h4>
-<ul>
-  <li>Implemented initial filtering functionality based on the action (Insert, Update, Delete) </li>
-  <li>Designed the system to easily extend with advanced filters</li>
-</ul>
+#### 3. Admin Log Viewer (`logs.php`)
+- Built the initial **Activity Log Viewer UI** for administrators.
+- Established database connection to fetch logs, ordered by the latest activity.
+- Displayed data in a structured, responsive tabular format.
 
+#### 4. Search & Filters
+- Implemented filtering functionality based on:
+  - **Action** (Insert, Update, Delete)
+  - **User Search** (Text search)
+  - **Date Range** (Start and End dates)
+- Designed the system architecture to easily extend with more advanced filters in the future.
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** HTML5, CSS3 (Responsive Design)
+- **Backend:** PHP (Native)
+- **Database:** MySQL
+- **Server:** Apache (XAMPP/WAMP)
+
+---
+
+## ⚙️ How to Run
+
+1. **Clone the Repository**
+   ```bash
+   git clone [https://github.com/Aman-G-upta/CP-Project-Audit-logs.git](https://github.com/Aman-G-upta/CP-Project-Audit-logs.git)
